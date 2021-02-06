@@ -12,9 +12,18 @@ public class HomePage {
 
     // Elements
     private By dashboardBody = By.className("card-body");
+    private By usernameDropdown = By.cssSelector(".ml-auto li:nth-child(2)");
+    private By logoutLink = By.xpath("//*[contains(text(), 'Logout')]");
+
 
     // Interactions
     public String getDashboardBodyText() {
         return driver.findElement(dashboardBody).getText();
+    }
+
+    public LoginPage clickLogoutLink() {
+        driver.findElement(usernameDropdown).click();
+        driver.findElement(logoutLink).click();
+        return new LoginPage(driver);
     }
 }

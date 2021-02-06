@@ -14,6 +14,7 @@ public class LoginPage {
     private By emailField = By.id("email");
     private By passwordField = By.id("password");
     private By loginButton = By.cssSelector("form button");
+    private By invalidFeedbackLabel = By.className("invalid-feedback");
 
     // Interactions
     public void setEmail(String email) {
@@ -28,4 +29,13 @@ public class LoginPage {
         driver.findElement(loginButton).click();
         return new HomePage(driver);
     }
+
+    public boolean isInvalidFeedbackLabelDisplayed() {
+        return driver.findElement(invalidFeedbackLabel).isDisplayed();
+    }
+
+    public String getInvalidFeedbackLabelText() {
+        return driver.findElement(invalidFeedbackLabel).getText();
+    }
+
 }
