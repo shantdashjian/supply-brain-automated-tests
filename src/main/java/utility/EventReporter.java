@@ -8,7 +8,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 
 public class EventReporter implements WebDriverEventListener {
 
-    private int DELAY_IN_MILLISECONDS = 500;
+    private int DELAY_IN_MILLISECONDS = 250;
 
     @Override
     public void beforeAlertAccept(WebDriver webDriver) {
@@ -157,7 +157,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-//        System.out.println("Clicking on " + webElement.getText());
     }
 
     @Override

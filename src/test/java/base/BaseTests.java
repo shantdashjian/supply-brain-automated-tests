@@ -3,7 +3,6 @@ package base;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -51,9 +50,5 @@ public class BaseTests {
             FileUtils.moveFile(screenshot, new File("./src/main/resources/screenshots/" + result.getName() + ".png"));
         }
         driver.quit();
-    }
-
-    @AfterClass
-    public void tearDown() {
     }
 }
