@@ -2,3 +2,4 @@ supply-brain-automated-tests.iml
 .idea/
 target/
 test-output/
+src/main/resources/screenshots/
