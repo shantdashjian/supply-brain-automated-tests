@@ -1,4 +1,4 @@
 supply-brain-automated-tests.iml
-.idea
-target
-test-output
+.idea/
+target/
+test-output/
