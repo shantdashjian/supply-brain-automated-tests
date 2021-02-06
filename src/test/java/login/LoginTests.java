@@ -5,14 +5,15 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.PasswordResetPage;
 
 import java.util.Set;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class LoginTests extends BaseTests {
     private LoginPage loginPage;
@@ -83,7 +84,7 @@ public class LoginTests extends BaseTests {
         // We need to clean the cookies and load back the previous session cookies
         driver.manage().deleteAllCookies();
         for (Cookie cookie : allCookies) {
-                driver.manage().addCookie(cookie);
+            driver.manage().addCookie(cookie);
         }
 
         goToLoginPage();
@@ -91,6 +92,39 @@ public class LoginTests extends BaseTests {
         String actualDashboardBodyText = homePage.getDashboardBodyText();
         assertEquals(actualDashboardBodyText, "You are logged in!", "Login failed");
         homePage.clickLogoutLink();
+    }
+
+    @Ignore
+    public void loginWithCorrectEmailAndCorrectPasswordAndWithoutCheckRememberMeShouldNotRememberUserAfterBrowserQuit() {
+        loginPage.setEmail("njdemo@njtest.com");
+        loginPage.setPassword("njdemo1234");
+        HomePage homePage = loginPage.clickLoginButton();
+
+        // Save cookies for next session
+        Set<Cookie> allCookies = driver.manage().getCookies();
+
+        driver.close();
+        driver = new ChromeDriver();
+        goToLoginPage();
+
+        // We need to clean the cookies and load back the previous session cookies
+        driver.manage().deleteAllCookies();
+        for (Cookie cookie : allCookies) {
+            driver.manage().addCookie(cookie);
+        }
+
+        goToLoginPage();
+        loginPage = new LoginPage(driver);
+        String actualBodyText = loginPage.getBodyText();
+        System.out.println(actualBodyText);
+        assertFalse(actualBodyText.contains("You are logged in!"));
+    }
+
+    @Test
+    public void clickResetPasswordLinkShouldOpenPasswordResetPage() {
+        PasswordResetPage passwordResetPage = loginPage.clickForgotYourPasswordLink();
+        String actualBodyText = passwordResetPage.getBodyText();
+        assertTrue(actualBodyText.contains("Reset Password"), "Password reset page did not display");
     }
 
     @AfterMethod

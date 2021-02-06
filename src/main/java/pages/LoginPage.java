@@ -16,6 +16,8 @@ public class LoginPage {
     private By loginButton = By.cssSelector("form button");
     private By invalidFeedbackLabel = By.className("invalid-feedback");
     private By rememberMeCheckbox = By.id("remember");
+    private By body = By.tagName("body");
+    private By forgotYourPasswordLink = By.xpath("//*[contains(text(), 'Forgot Your Password?')]");
 
     // Interactions
     public void setEmail(String email) {
@@ -41,6 +43,15 @@ public class LoginPage {
 
     public void checkRememberMeCheckbox() {
         driver.findElement(rememberMeCheckbox).click();
+    }
+
+    public String getBodyText() {
+        return driver.findElement(body).getText();
+    }
+
+    public PasswordResetPage clickForgotYourPasswordLink() {
+        driver.findElement(forgotYourPasswordLink).click();
+        return new PasswordResetPage(driver);
     }
 
 }
