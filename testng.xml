@@ -6,7 +6,7 @@
         <classes>
             <class name="login.LoginTests" >
                 <methods>
-                    <include name="loginWithCorrectEmailAndPasswordShouldAuthenticateAndThenLogout"/>
+                    <include name="loginWithCorrectEmailAndPasswordShouldAuthenticate"/>
                     <include name="loginWithCorrectEmailButIncorrectPasswordShouldGiveAnErrorMessage"/>
                     <include name="loginWithIncorrectEmailButCorrectPasswordShouldGiveAnErrorMessage"/>
                     <include name="loginWithoutEmailButWithPasswordShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>

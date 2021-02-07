@@ -40,7 +40,7 @@ public class BaseTests extends TestListenerAdapter {
 
     private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
+        options.setHeadless(false);
         return options;
     }
 

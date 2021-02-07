@@ -32,7 +32,7 @@ public class LoginTests extends BaseTests {
 
 
     @Test(description = "logs in with correct email and password")
-    public void loginWithCorrectEmailAndPasswordShouldAuthenticateAndThenLogout() {
+    public void loginWithCorrectEmailAndPasswordShouldAuthenticate() {
         loginPage.setEmail("njdemo@njtest.com");
         loginPage.setPassword("njdemo1234");
         HomePage homePage = loginPage.clickLoginButton();
