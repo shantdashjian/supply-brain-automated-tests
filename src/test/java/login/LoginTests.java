@@ -63,49 +63,16 @@ public class LoginTests extends BaseTests {
         assertEquals(actualInvalidFeedbackLabelText, "These credentials do not match our records.", "Invalid feedback text incorrect");
     }
 
-    @Test(description = "tries to log in without entering email but with password")
-    public void loginWithoutEmailButWithPasswordShouldStayOnTheLoginPageAndShowHTML5ValidationMessage() {
-        loginPage.setEmail("");
-        loginPage.setPassword("njdemo1234");
-        loginPage.clickLoginButton();
-        String actualValidationMessage = loginPage.getEmailValidationMessage();
-        assertEquals(actualValidationMessage, "Please fill out this field.", "Validation message did not display");
+    @Test(description = "verifies that the browser will perform HTML5 validation on the email input field")
+    public void hasEmailValidation() {
+        boolean actualEmailValidationPresent = loginPage.emailFieldIsOfTypeEmailAndIsRequired();
+        assertTrue(actualEmailValidationPresent, "Email input may fail to get validated");
     }
 
-    @Test(description = "tries to log in entering email but with no password")
-    public void loginWithEmailButNoPasswordShouldStayOnTheLoginPageAndShowHTML5ValidationMessage() {
-        loginPage.setEmail("njdemo@njtest.com");
-        loginPage.setPassword("");
-        loginPage.clickLoginButton();
-        String actualValidationMessage = loginPage.getPasswordValidationMessage();
-        assertEquals(actualValidationMessage, "Please fill out this field.", "Validation message did not display");
-    }
-
-    @Test(description = "tries to log in entering email without an @")
-    public void loginWithEmailWithoutAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage() {
-        loginPage.setEmail("njdemonjtest.com");
-        loginPage.setPassword("njdemo1234");
-        loginPage.clickLoginButton();
-        String actualValidationMessage = loginPage.getEmailValidationMessage();
-        assertTrue(actualValidationMessage.contains("Please include an '@' in the email address."), "Validation message did not display");
-    }
-
-    @Test(description = "tries to log in entering email without a part before the @")
-    public void loginWithEmailWithoutAPartBeforeTheAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage() {
-        loginPage.setEmail("@test.com");
-        loginPage.setPassword("njdemo1234");
-        loginPage.clickLoginButton();
-        String actualValidationMessage = loginPage.getEmailValidationMessage();
-        assertTrue(actualValidationMessage.contains("Please enter a part followed by '@'."), "Validation message did not display");
-    }
-
-    @Test(description = "tries to log in entering email without a part after the @")
-    public void loginWithEmailWithoutAPartAfterTheAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage() {
-        loginPage.setEmail("njdemo@");
-        loginPage.setPassword("njdemo1234");
-        loginPage.clickLoginButton();
-        String actualValidationMessage = loginPage.getEmailValidationMessage();
-        assertTrue(actualValidationMessage.contains("Please enter a part following '@'."), "Validation message did not display");
+    @Test(description = "verifies that the browser will perform HTML5 validation on the password input field")
+    public void hasPasswordValidation() {
+        boolean actualPasswordValidationPresent = loginPage.passwordFieldIsOfTypePasswordAndIsRequired();
+        assertTrue(actualPasswordValidationPresent, "Password input may fail to get validated");
     }
 
     @Test(description = "logs in with correct email and password and checks the Remember Me checkbox")

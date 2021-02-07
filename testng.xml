@@ -9,11 +9,8 @@
                     <include name="loginWithCorrectEmailAndPasswordShouldAuthenticate"/>
                     <include name="loginWithCorrectEmailButIncorrectPasswordShouldGiveAnErrorMessage"/>
                     <include name="loginWithIncorrectEmailButCorrectPasswordShouldGiveAnErrorMessage"/>
-                    <include name="loginWithoutEmailButWithPasswordShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
-                    <include name="loginWithEmailButNoPasswordShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
-                    <include name="loginWithEmailWithoutAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
-                    <include name="loginWithEmailWithoutAPartBeforeTheAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
-                    <include name="loginWithEmailWithoutAPartAfterTheAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
+                    <include name="hasEmailValidation"/>
+                    <include name="hasPasswordValidation"/>
                     <include name="loginWithCorrectEmailAndCorrectPasswordAndCheckRememberMeShouldRememberUserAfterBrowserQuit"/>
                     <include name="loginWithCorrectEmailAndCorrectPasswordAndWithoutCheckRememberMeShouldNotRememberUserAfterBrowserQuit"/>
                     <include name="clickResetPasswordLinkShouldOpenPasswordResetPage"/>
