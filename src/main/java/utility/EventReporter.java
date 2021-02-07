@@ -8,7 +8,7 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 
 public class EventReporter implements WebDriverEventListener {
 
-    private int DELAY_IN_MILLISECONDS = 250;
+    private int DELAY_IN_MILLISECONDS = 0;
 
     @Override
     public void beforeAlertAccept(WebDriver webDriver) {

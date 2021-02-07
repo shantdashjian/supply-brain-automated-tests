@@ -38,7 +38,7 @@ public class BaseTests {
 
     private ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
-        options.setHeadless(false);
+        options.setHeadless(true);
         return options;
     }
 

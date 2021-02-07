@@ -54,4 +54,12 @@ public class LoginPage {
         return new PasswordResetPage(driver);
     }
 
+    public String getEmailValidationMessage() {
+        return driver.findElement(emailField).getAttribute("validationMessage");
+    }
+
+    public String getPasswordValidationMessage() {
+        return driver.findElement(passwordField).getAttribute("validationMessage");
+    }
+
 }

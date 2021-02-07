@@ -1,0 +1,22 @@
+<suite name="supply-brain-automated-test">
+    <test name="supply-brain-automated-test">
+        <classes>
+            <class name="login.LoginTests" >
+                <methods>
+                    <include name="loginWithCorrectEmailAndPasswordShouldAuthenticateAndThenLogout"/>
+                    <include name="loginWithCorrectEmailButIncorrectPasswordShouldGiveAnErrorMessage"/>
+                    <include name="loginWithIncorrectEmailButCorrectPasswordShouldGiveAnErrorMessage"/>
+                    <include name="loginWithoutEmailButWithPasswordShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
+                    <include name="loginWithEmailButNoPasswordShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
+                    <include name="loginWithEmailWithoutAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
+                    <include name="loginWithEmailWithoutAPartBeforeTheAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
+                    <include name="loginWithEmailWithoutAPartAfterTheAtSignShouldStayOnTheLoginPageAndShowHTML5ValidationMessage"/>
+                    <include name="loginWithCorrectEmailAndCorrectPasswordAndCheckRememberMeShouldRememberUserAfterBrowserQuit"/>
+                    <include name="loginWithCorrectEmailAndCorrectPasswordAndWithoutCheckRememberMeShouldNotRememberUserAfterBrowserQuit"/>
+                    <include name="clickResetPasswordLinkShouldOpenPasswordResetPage"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+</suite>
