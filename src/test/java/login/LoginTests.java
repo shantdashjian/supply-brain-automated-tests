@@ -32,7 +32,7 @@ public class LoginTests extends BaseTests {
 
 
     @Test(description = "logs in with correct email and password")
-    public void loginWithCorrectEmailAndPasswordShouldAuthenticate() {
+    public void login_with_correct_email_and_password_should_authenticate() {
         loginPage.setEmail("njdemo@njtest.com");
         loginPage.setPassword("njdemo1234");
         HomePage homePage = loginPage.clickLoginButton();
@@ -42,7 +42,7 @@ public class LoginTests extends BaseTests {
     }
 
     @Test(description = "tries to log in with correct email but incorrect password")
-    public void loginWithCorrectEmailButIncorrectPasswordShouldGiveAnErrorMessage() {
+    public void login_with_correct_email_but_incorrect_password_should_give_an_error_message() {
         loginPage.setEmail("njdemo@njtest.com");
         loginPage.setPassword("incorrectpassword");
         loginPage.clickLoginButton();
@@ -53,7 +53,7 @@ public class LoginTests extends BaseTests {
     }
 
     @Test(description = "tries to log in with incorrect email but correct password")
-    public void loginWithIncorrectEmailButCorrectPasswordShouldGiveAnErrorMessage() {
+    public void login_with_incorrect_email_but_correct_password_should_give_an_error_message() {
         loginPage.setEmail("incorrectusername@njtest.com");
         loginPage.setPassword("njdemo1234");
         loginPage.clickLoginButton();
@@ -64,19 +64,19 @@ public class LoginTests extends BaseTests {
     }
 
     @Test(description = "verifies that the browser will perform HTML5 validation on the email input field")
-    public void hasEmailValidation() {
+    public void has_email_validation() {
         boolean actualEmailValidationPresent = loginPage.emailFieldIsOfTypeEmailAndIsRequired();
         assertTrue(actualEmailValidationPresent, "Email input may fail to get validated");
     }
 
     @Test(description = "verifies that the browser will perform HTML5 validation on the password input field")
-    public void hasPasswordValidation() {
+    public void has_password_validation() {
         boolean actualPasswordValidationPresent = loginPage.passwordFieldIsOfTypePasswordAndIsRequired();
         assertTrue(actualPasswordValidationPresent, "Password input may fail to get validated");
     }
 
     @Test(description = "logs in with correct email and password and checks the Remember Me checkbox")
-    public void loginWithCorrectEmailAndCorrectPasswordAndCheckRememberMeShouldRememberUserAfterBrowserQuit() {
+    public void login_with_correct_email_and_correct_password_and_check_remember_me_should_remember_user_after_browser_quit() {
         loginPage.setEmail("njdemo@njtest.com");
         loginPage.setPassword("njdemo1234");
         loginPage.checkRememberMeCheckbox();
@@ -103,7 +103,7 @@ public class LoginTests extends BaseTests {
     }
 
     @Test(description = "logs in with correct email and password without checking the Remember Me checkbox")
-    public void loginWithCorrectEmailAndCorrectPasswordAndWithoutCheckRememberMeShouldNotRememberUserAfterBrowserQuit() {
+    public void login_with_correct_email_and_correct_password_without_checking_remember_me_should_not_remember_user_after_browser_quit() {
         loginPage.setEmail("njdemo@njtest.com");
         loginPage.setPassword("njdemo1234");
         HomePage homePage = loginPage.clickLoginButton();
@@ -128,7 +128,7 @@ public class LoginTests extends BaseTests {
     }
 
     @Test(description = "clicks Forgot Your Password? link")
-    public void clickResetPasswordLinkShouldOpenPasswordResetPage() {
+    public void click_reset_password_link_should_open_password_reset_page() {
         PasswordResetPage passwordResetPage = loginPage.clickForgotYourPasswordLink();
         String actualBodyText = passwordResetPage.getBodyText();
         assertTrue(actualBodyText.contains("Reset Password"), "Password reset page did not display");

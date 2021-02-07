@@ -6,14 +6,14 @@
         <classes>
             <class name="login.LoginTests" >
                 <methods>
-                    <include name="loginWithCorrectEmailAndPasswordShouldAuthenticate"/>
-                    <include name="loginWithCorrectEmailButIncorrectPasswordShouldGiveAnErrorMessage"/>
-                    <include name="loginWithIncorrectEmailButCorrectPasswordShouldGiveAnErrorMessage"/>
-                    <include name="hasEmailValidation"/>
-                    <include name="hasPasswordValidation"/>
-                    <include name="loginWithCorrectEmailAndCorrectPasswordAndCheckRememberMeShouldRememberUserAfterBrowserQuit"/>
-                    <include name="loginWithCorrectEmailAndCorrectPasswordAndWithoutCheckRememberMeShouldNotRememberUserAfterBrowserQuit"/>
-                    <include name="clickResetPasswordLinkShouldOpenPasswordResetPage"/>
+                    <include name="login_with_correct_email_and_password_should_authenticate"/>
+                    <include name="login_with_correct_email_but_incorrect_password_should_give_an_error_message"/>
+                    <include name="login_with_incorrect_email_but_correct_password_should_give_an_error_message"/>
+                    <include name="has_email_validation"/>
+                    <include name="has_password_validation"/>
+                    <include name="login_with_correct_email_and_correct_password_and_check_remember_me_should_remember_user_after_browser_quit"/>
+                    <include name="login_with_correct_email_and_correct_password_without_checking_remember_me_should_not_remember_user_after_browser_quit"/>
+                    <include name="click_reset_password_link_should_open_password_reset_page"/>
                 </methods>
             </class>
         </classes>
