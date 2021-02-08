@@ -75,6 +75,8 @@ https://api-demo.supplybrain.io/login
   ### Slowing Down the Automation for Demo Purposes:
   * **Issue:** Selenium is fast. When demoing the automated tests, I wanted to slow it down.
   * **Solution:** I added a class `AutomationEventSpeedChanger` that implements `WebDriverEventListener` and registered it when instantiating the `driver`. This class can be used to add an optional delay in milliseconds before and after each automation event like `click`, `sendKeys`, etc. This way I was able to slow down the automation when demoing it and describe each test case as it was running.
+    ![alt text](images/delay.png "Automation Delay Class")
+
 
 [Up](README.md)
 
