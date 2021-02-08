@@ -106,7 +106,7 @@ public class LoginTests extends BaseTests {
     public void login_with_correct_email_and_correct_password_without_checking_remember_me_should_not_remember_user_after_browser_quit() {
         loginPage.setEmail("njdemo@njtest.com");
         loginPage.setPassword("njdemo1234");
-        HomePage homePage = loginPage.clickLoginButton();
+        loginPage.clickLoginButton();
 
         // Save cookies for next session
         Set<Cookie> allCookies = driver.manage().getCookies();
