@@ -59,7 +59,7 @@ https://api-demo.supplybrain.io/login
 10. Run the test case and see it working as expected.
 11. Do any refactoring necessary.
 12. Commit your changes in `git`.
-13. Repeat steps 6-12 till you reach the level of automation coverage desired for your test scenraions. After adding the happy path case for each test scenario, add the edge cases, then move on to the next test scenario.
+13. Repeat steps 6-12 till you reach the level of automation coverage desired for your test scenraions. After adding the happy path case for each test scenario, add the unhappy path cases, then move on to the next test scenario.
   
 ## Issues and Learning Points
   ### Testing *Remember Me* functionality:
