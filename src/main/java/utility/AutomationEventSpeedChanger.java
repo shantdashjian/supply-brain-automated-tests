@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class EventReporter implements WebDriverEventListener {
+public class AutomationEventSpeedChanger implements WebDriverEventListener {
 
-    private int DELAY_IN_MILLISECONDS = 0;
+    private final int DELAY_IN_MILLISECONDS = 0;
 
     @Override
     public void beforeAlertAccept(WebDriver webDriver) {
@@ -17,7 +17,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -27,7 +26,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -37,7 +35,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -47,7 +44,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -57,7 +53,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -67,7 +62,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -77,7 +71,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -87,7 +80,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -97,7 +89,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -107,7 +98,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -117,7 +107,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -127,7 +116,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -137,7 +125,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -147,7 +134,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -156,8 +142,7 @@ public class EventReporter implements WebDriverEventListener {
             Thread.sleep(DELAY_IN_MILLISECONDS);
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
-        }
-    }
+        }    }
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
@@ -166,7 +151,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -176,7 +160,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -186,7 +169,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -196,7 +178,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -206,7 +187,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -216,7 +196,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -226,7 +205,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -236,7 +214,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -246,7 +223,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -256,7 +232,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -266,7 +241,6 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
@@ -276,6 +250,5 @@ public class EventReporter implements WebDriverEventListener {
         } catch (InterruptedException e) {
             System.out.println(e.getMessage());
         }
-
     }
 }

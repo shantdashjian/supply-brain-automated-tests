@@ -12,7 +12,7 @@ import org.testng.TestListenerAdapter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import utility.EventReporter;
+import utility.AutomationEventSpeedChanger;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,7 +34,7 @@ public class BaseTests extends TestListenerAdapter {
 
     protected void instantiateDriver() {
         driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
-        driver.register(new EventReporter());
+        driver.register(new AutomationEventSpeedChanger());
     }
 
     private ChromeOptions getChromeOptions() {
