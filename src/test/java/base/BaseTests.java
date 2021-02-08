@@ -46,7 +46,7 @@ public class BaseTests extends TestListenerAdapter {
     @Override
     public void onTestFailure(ITestResult result) {
         try {
-            var camera = (TakesScreenshot) driver;
+            TakesScreenshot camera = (TakesScreenshot) driver;
             File screenshot = camera.getScreenshotAs(OutputType.FILE);
             File destinationFile = new File("./test-output/screenshots/" + result.getMethod() + ".png");
             FileUtils.moveFile(screenshot, destinationFile);

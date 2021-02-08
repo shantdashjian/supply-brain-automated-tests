@@ -1,8 +1,8 @@
-<suite name="supply-brain-automated-test">
+<suite name="supply-brain-automated-tests">
     <listeners>
         <listener class-name="base.BaseTests" />
     </listeners>
-    <test name="supply-brain-automated-test">
+    <test name="supply-brain-automated-tests">
         <classes>
             <class name="login.LoginTests" >
                 <methods>
