@@ -40,9 +40,9 @@ https://api-demo.supplybrain.io/login
   ![alt text](images/emailable-report.png "Test Report")
 
 ## Technologies Used
-  * Java
-  * Selenium
-  * TestNJ
+  * Java: I'm Oracle certified Java developer and have 2 years of work experience developing using Java and Scala.
+  * Selenium: I'm comfortable using Selenium. I used it at my last job to automate our end-to-end test scenarios for our campaign management system.
+  * TestNJ: I have many years of experience using JUnit and wanted to check out TestNJ which has some additional features and differences. 
   * Maven
 
 ## Development Approach
