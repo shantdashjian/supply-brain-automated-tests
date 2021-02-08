@@ -45,7 +45,7 @@ https://api-demo.supplybrain.io/login
 
 ## Development Approach
 1. Begin with exploratory testing to learn.
-2. Jot down the key test scenarios: login with email and password, remember me, forgot password.
+2. Jot down the key test scenarios: login with email and password, email and password validation, remember me, and forgot password.
 3. In IDE, create a new Maven project.
 4. Add `Selenium` and `TestNG` dependencies.
 5. In the `test` folder, create your base tests class and login tests class.
