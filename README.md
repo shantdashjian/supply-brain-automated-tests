@@ -1,6 +1,8 @@
 # supply-brain-automated-tests
 Automated tests for the Supply Brain login functionality, built with Selenium and TestNG
 
+![alt text](images/automated-tests.gif "Automated tests")
+
 ![alt text](images/login-tests.png "Login Tests run report in IntelliJ")
 
 ## In This Document:
