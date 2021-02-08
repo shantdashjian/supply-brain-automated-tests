@@ -35,7 +35,7 @@ https://api-demo.supplybrain.io/login
 3. `> mvn install`
 
 ## Test Results Report
-  * Running the automated tests will generate a test results report which will include screenshots of any failed tests
+  * Running the automated tests will generate a test results report which will include screenshots of any failed tests.
   * In your browser, open `test-output/emailable-report.html`.
   ![alt text](images/emailable-report.png "Test Report")
 
@@ -54,11 +54,11 @@ https://api-demo.supplybrain.io/login
 6. Write a test case, annotated with `@Test`. Start with the happy path test case for the first test scenario.
 7. Using the [Page Object Model design pattern](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/
 ), create a class to model each page in the application under test.
-8. For each page class, add fields for mechanisms to locate `DOM` elements, and methods for intercting with those elements. 
+8. For each page class, add fields for mechanisms to locate `DOM` elements, and methods for interacting with those elements. 
 9. Use the browser's `Developer Tools` to find the mechanisms to locate `DOM` elements.
 10. Run the test case and see it working as expected.
 11. Do any refactoring necessary.
-12. Commit your changes in `git`
+12. Commit your changes in `git`.
 13. Repeat steps 6-12 till you reach the level of automation coverage desired for your test scenraions. After adding the happy path case for each test scenario, add the edge cases, then move on to the next test scenario.
   
 ## Issues and Learning Points
