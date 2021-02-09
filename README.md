@@ -47,8 +47,8 @@ https://api-demo.supplybrain.io/login
 
 ## Development Approach
 1. Begin with exploratory testing to learn.
-2. Jot down the key test scenarios: login with email and password, email and password validation, remember me, and forgot password.
-3. In IDE, create a new Maven project.
+2. Jot down the test scenarios: login with email and password, email and password validation, remember me, and forgot password. Make sure you understnad the expected behavior.
+3. In IDE, create a new Maven project. 
 4. Add `Selenium` and `TestNG` dependencies.
 5. In the `test` folder, create your base tests class and login tests class.
 6. Write a test case, annotated with `@Test`. Start with the happy path test case for the first test scenario.
@@ -59,7 +59,7 @@ https://api-demo.supplybrain.io/login
 10. Run the test case and see it working as expected.
 11. Do any refactoring necessary.
 12. Commit your changes in `git`.
-13. Repeat steps 6-12 till you reach the level of automation coverage desired for your test scenraions. After adding the happy path case for each test scenario, add the unhappy path cases, then move on to the next test scenario.
+13. Repeat steps 6-12 till you reach the level of automation coverage desired for your test scenarios. After adding the happy path case for each test scenario, add the unhappy path cases, then move on to the next test scenario.
   
 ## Issues and Learning Points
   ### Testing *Remember Me* functionality:
